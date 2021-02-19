@@ -1,0 +1,30 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Makes a profile with your teams information",
+  "main": "application.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3",
+    "jest": "^26.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brandon-Fontes/Meet_my_team.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Brandon Fontes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brandon-Fontes/Meet_my_team/issues"
+  },
+  "homepage": "https://github.com/Brandon-Fontes/Meet_my_team#readme"
+}

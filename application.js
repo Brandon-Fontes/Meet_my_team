@@ -153,8 +153,8 @@ function appMenu(){
             name: "internId",
             message: "Intern's ID:",
             validate: answer =>{
-                (/^[1-9]\d*$/);
-                if(pass){
+                const pass = answer.match(/^[1-9]\d*$/);
+                if (pass){
                     if (idArray.includes(answer)){
                         return "This id is already being used. Please enter Intern ID:"
                     }else{
@@ -197,6 +197,31 @@ function appMenu(){
             createTeam();
         })
     }
+    function createTeam(){
+        inquirer.prompt([{
+            type: "list",
+            name: "memberChoice",
+            message: "Do you want to add another team member?",
+            choices: [
+                "Engineer",
+                "Intern",
+                "No"
+            ]
+        }])
+        .then(userChoice => {
+            switch (userChoice.memberChoice){
+                case "Engineer":
+                    addEngineer();
+                    break;
+                case "Intern":
+                    addIntern();
+                    break
+                    default:
+                        buildTeam();
+            }
+        })
+    }
+
     function buildTeam(){
         if(!fs.existsSync(OUTPUT_DIR)){
             fs.mkdirSync(OUTPUT_DIR)
