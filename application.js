@@ -26,7 +26,7 @@ function appMenu(){
         {
             type: "input",
             name: "managerId",
-            message: "manager's id",
+            message: "manager's id:",
             validate: answer =>  {
                 const pass = answer.match(/^[1-9]\d*$/);
                 if (pass) {
@@ -140,7 +140,7 @@ function appMenu(){
         inquirer.prompt([{
             type: "input",
             name: "internName",
-            message: "Intern's Name",
+            message: "What is the intern's Name:",
             validate: answer => {
                 if (answer !== ""){
                     return true;
@@ -180,7 +180,7 @@ function appMenu(){
         {
             type: "input",
             name: "internSchool",
-            message: "Enter Interns School Name",
+            message: "Enter Interns School Name:",
             validate: answer => {
                 if (answer !== ""){
                     return true;
